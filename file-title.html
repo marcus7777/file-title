@@ -1,0 +1,21 @@
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<!--
+`<file-title></file-title>` Read file in to title
+@demo demo.html
+-->
+
+<dom-module id="file-title">
+  <template>
+    <iron-ajax auto url="{{href}}" handle-as="text" last-response="{{title}}"></iron-ajax>
+  </template>
+</dom-module>
+<script>
+Polymer({
+  is: "file-title",
+  properties: {
+    title: {
+      notify: true
+    }
+  }
+})
+</script>
